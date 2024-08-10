@@ -7,6 +7,7 @@ use pocketmine\item\enchantment\Enchantment;
 use pocketmine\item\enchantment\EnchantmentInstance;
 use pocketmine\item\Item;
 use AeroCES\Enchants\Weapon\Sword\Vampirism;
+use AeroCES\Enchants\Helmet\NightVision;
 
 class Main extends PluginBase {
 
@@ -16,6 +17,9 @@ class Main extends PluginBase {
         // Register the custom enchantment
         $vampirism = new Vampirism();
         Enchantment::registerEnchantment($vampirism);
+        $nightvision = new NightVision();
+        Enchantment::registerEnchantment($nightvision);
+    
     }
 
     public function onDisable(): void {
