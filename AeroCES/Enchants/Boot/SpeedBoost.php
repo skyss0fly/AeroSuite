@@ -12,7 +12,7 @@ use pocketmine\item\Item;
 use pocketmine\entity\Effect;
 use pocketmine\entity\EffectInstance;
 
-class Main extends PluginBase implements Listener {
+class SpeedBoost extends PluginBase implements Listener {
 
     public function onEnable(): void {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
