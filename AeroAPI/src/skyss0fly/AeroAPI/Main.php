@@ -40,3 +40,20 @@ class Main extends PluginBase {
     }
 }
 
+public function deductMoney(Player $player, int $amount): bool {
+        $playerName = $player->getName();
+        
+        // Check if the player already has money recorded
+        if (isset($this->money[$playerName])) {
+            $previous = $this->money[$playerName];
+        } else {
+            $previous = 0;
+        }
+
+        // Calculate the new amount
+        $new = $previous - $amount;
+        $this->money[$playerName] = $new;
+
+        // Return true to indicate the operation was successful
+        return true;
+}
