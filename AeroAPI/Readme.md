@@ -8,6 +8,8 @@
 
 
 # TODO
-[] Land Claiming
-[] Custom Enchants 
-[] Shop
+[ ] Land Claiming,
+
+[ ] Custom Enchants,
+
+[ ] Shop
