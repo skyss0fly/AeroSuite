@@ -6,7 +6,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\item\enchantment\Enchantment;
 use pocketmine\item\enchantment\EnchantmentInstance;
 use pocketmine\item\Item;
-use AeroCES\enchants\Sword\Vampirism;
+use AeroCES\Enchants\Weapon\Sword\Vampirism;
 
 class Main extends PluginBase {
 
