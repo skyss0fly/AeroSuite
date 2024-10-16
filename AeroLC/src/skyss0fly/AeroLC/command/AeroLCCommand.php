@@ -4,8 +4,9 @@ namespace skyss0fly\AeroLC;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
+use CortexPE\Commando\BaseCommand;
 
-class AeroLCCommand extends Command {
+class AeroLCCommand extends BaseCommand {
 
     public function __construct(){
         parent::__construct("aerolc", "AeroLC base command", "/aerolc", []);
