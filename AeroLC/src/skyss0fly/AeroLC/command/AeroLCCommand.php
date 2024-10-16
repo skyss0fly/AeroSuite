@@ -9,7 +9,7 @@ use CortexPE\Commando\BaseCommand;
 class AeroLCCommand extends BaseCommand {
 
     protected function prepare(): void {
-        $this->registerSubCommand(new ClaimSubcommand("help", "Help"));
+        $this->registerSubCommand(new HelpSubcommand("help", "Help"));
         
         
         $this->setPermission(self::BASE_PERMISSION);
