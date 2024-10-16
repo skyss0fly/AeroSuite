@@ -8,21 +8,20 @@ use CortexPE\Commando\BaseCommand;
 
 class AeroLCCommand extends BaseCommand {
 
-    public function __construct(){
-        parent::__construct("aerolc", "AeroLC base command", "/aerolc", []);
-        $this->setPermission("aerolc.command");
+    protected function prepare(): void {
+        $this->registerSubCommand(new ClaimSubcommand("help", "Help"));
+        
+        
+        $this->setPermission(self::BASE_PERMISSION);
     }
-
-    public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
-        if(!$this->testPermission($sender)){
-            return false;
-        }
-
-        if($sender instanceof Player){
-            $sender->sendMessage("This is the base AeroLC command!");
-        } else {
-            $sender->sendMessage("This command can only be used in-game.");
-        }
-        return true;
+    
+    public function getPermission(): string {
+        return self::BASE_PERMSISSION;
     }
+    
+    public function onRun(CommandSender $sender, string $alias, array $args): void {
+        $sender->sendMessage($this->getOwningPlugin()->getLangManager()->translate("plugin.in-dev"));
+    }
+    
 }
+?>
