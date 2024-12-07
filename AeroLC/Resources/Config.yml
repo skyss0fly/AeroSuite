@@ -1,0 +1,7 @@
+landcostmoney: true
+economy: easy
+# values: Easy, Medium, Hard, Expert
+# ( The harder the difficulty, the more pricy the land costs )
+
+valuelossovertime: true
+# if false your land won't lose value over time
