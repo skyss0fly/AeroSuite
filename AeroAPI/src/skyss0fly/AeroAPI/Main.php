@@ -8,11 +8,23 @@ use pocketmine\player\Player;
 
 class Main extends PluginBase {
     private $money = [];
-
+    public version;
+    public isdevelopment;
+    
     public function onLoad(): void {
         // Initialize the money array
         $this->money = [];
+        $this->version = 0.2; // 0.3 is next
+        $this->isdevelopment = true;
+
+
     }
+    public function getApiVersion(): bool {
+        return $this->version;
+    }
+public function isApiInDevelopment(): bool {
+    return $this->isdevelopment;
+}
 
     public function addMoney(Player $player, int $amount): bool {
         $playerName = $player->getName();
