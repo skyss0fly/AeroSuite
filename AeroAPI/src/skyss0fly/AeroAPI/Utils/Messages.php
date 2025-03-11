@@ -5,7 +5,7 @@ use pocketmine\utils\TextFormat;
 
 class Messages {
 
-public function sendErrorToConsole(string $str);
+public function sendErrorToConsole(string $str){
   $this->getLogger()->error("AeroAPI: " . $str);
 }
 
