@@ -12,7 +12,7 @@ class Messages extends PluginBase {
         $this->getLogger()->error("AeroAPI: " . $str);
     }
 
-    public function sendErrorToPlayers(string $str, Player $player): void {
+    public function sendErrorToPlayer(string $str, Player $player): void {
         if (!$player instanceof Player) {
             $this->sendErrorToConsole("Player Not Found!");
             return;
